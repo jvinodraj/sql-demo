@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOP: Generating Reports in SQL Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            position: relative;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        h3 {
+            border-bottom: 1px solid #aaa;
+            padding-bottom: 5px;
+        }
+        ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .sub-navbar {
+            display: none;
+            background-color: #f4f4f4;
+            padding: 10px;
+            position: absolute;
+            top: 48px;
+            left: 0;
+            right: 0;
+            border: 1px solid #ccc;
+        }
+        .navbar .submenu-container:hover .sub-navbar {
+            display: block;
+        }
+        .sub-navbar a {
+            display: block;
+            color: #333;
+            padding: 5px 0;
+            text-decoration: none;
+        }
+        .sub-navbar a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#introduction">Introduction</a>
+        <a href="#prerequisites">Prerequisites</a>
+        <div class="submenu-container">
+            <a href="#steps">Steps</a>
+            <div class="sub-navbar">
+                <a href="#step1">1. Open SSMS</a>
+                <a href="#step2">2. Connect to SQL Server</a>
+                <a href="#step3">3. Open a New Query Window</a>
+                <a href="#step4">4. Write SQL Query</a>
+                <a href="#step5">5. Execute the Query</a>
+                <a href="#step6">6. Review Results</a>
+                <a href="#step7">7. Export Results</a>
+            </div>
+        </div>
+        <a href="#troubleshooting">Troubleshooting</a>
+    </div>
+
+    <div class="content">
+        <div class="section" id="introduction">
+            <h2>Introduction</h2>
+            <p>This SOP document provides instructions on how to generate reports in SQL Server. Following these steps ensures consistency and accuracy in reporting.</p>
+        </div>
+
+        <div class="section" id="prerequisites">
+            <h2>Prerequisites</h2>
+            <p>Before you start, ensure you have the following:</p>
+            <ol>
+                <li>Access to SQL Server Management Studio (SSMS)</li>
+                <li>Necessary permissions to run queries and generate reports</li>
+                <li>Knowledge of the database schema and tables involved in the reports</li>
+            </ol>
+        </div>
+
+        <div class="section" id="steps">
+            <h2>Steps</h2>
+            <div id="step1">
+                <h3>1. Open SQL Server Management Studio (SSMS)</h3>
+                <p>Launch SSMS from your Start menu or desktop shortcut.</p>
+            </div>
+            
+            <div id="step2">
+                <h3>2. Connect to the Appropriate SQL Server Instance</h3>
+                <p>In the "Connect to Server" window, enter the server name and authentication details. Click "Connect".</p>
+            </div>
+            
+            <div id="step3">
+                <h3>3. Open a New Query Window</h3>
+                <p>Click on "New Query" in the toolbar to open a new query window.</p>
+            </div>
+            
+            <div id="step4">
+                <h3>4. Write the SQL Query</h3>
+                <p>Write the SQL query to extract the required data. For example:</p>
+                <pre>
+SELECT 
+    EmployeeID, 
+    FirstName, 
+    LastName, 
+    Department, 
+    Salary 
+FROM 
+    Employees 
+WHERE 
+    Active = 1;
+                </pre>
+            </div>
+            
+            <div id="step5">
+                <h3>5. Execute the Query</h3>
+                <p>Execute the query by clicking the "Execute" button or pressing F5.</p>
+            </div>
+            
+            <div id="step6">
+                <h3>6. Review the Results</h3>
+                <p>Review the results to ensure they meet the requirements.</p>
+            </div>
+            
+            <div id="step7">
+                <h3>7. Export the Results</h3>
+                <p>Export the results to a report format (e.g., CSV, Excel) by right-clicking on the result set and selecting the appropriate export option.</p>
+            </div>
+        </div>
+
+        <div class="section" id="troubleshooting">
+            <h2>Troubleshooting</h2>
+            <p>If you encounter any issues during the report generation process, consider the following troubleshooting steps:</p>
+            <ol>
+                <li>Ensure your SQL syntax is correct and there are no typos.</li>
+                <li>Verify your permissions to run the query and access the necessary tables.</li>
+                <li>Check for any network or connectivity issues to the SQL Server instance.</li>
+                <li>Consult the SQL Server error logs for more detailed error messages.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
